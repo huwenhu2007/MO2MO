@@ -1,0 +1,12 @@
+{
+  bDebug: "false",
+  bAuth: "true",
+  strHost: "smtp.163.com",
+  strPort: "25",
+  strProtocol: "smtp",
+  strSubject: "MO2MO Cuckoo",
+  strSendEmail: "",
+  strUserName: "",
+  strPassword: "",
+  strToEmail: ""
+}

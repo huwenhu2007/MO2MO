@@ -1,0 +1,27 @@
+[
+  {
+    strSign: "test",
+    strDMLTargetClass: "oplog.listener.mongo.impl.DMLMongoListener",
+    strMongoIP: "",
+    nMongoPort: ,
+    nVersion: 2,
+    strMongoDBName: "",
+    strMongoUserName: "",
+    strMongoPassWord: "",
+    jsonDBRule:{
+      "MonitorGather": "Account"
+    }
+  },
+  {
+    strSign: "test2",
+    strDMLTargetClass: "oplog.listener.kafka.impl.DMLKafkaListener",
+    jsonParamObject: {
+      "bootstrap.servers": "",
+      "acks": "all",
+      "retries": 3,
+      "batch.size": 16384,
+      "max.request.size": 10485760,
+      "send.buffer.bytes": 10485760
+    }
+  }
+]

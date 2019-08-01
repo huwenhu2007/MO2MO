@@ -1,0 +1,32 @@
+{
+  strConfigMode:"local",
+  strZKClientDomain:"",
+  strRootNodeName:"MM",
+
+  strEndLogPosPath:"D://M2M4J//EndLogPos//",
+  nMoniterState: 1,
+  nJettyPort: 1214,
+
+  nCuckoo: 1,
+  strCuckooJSON: "email",
+
+  sourceConfig:[
+    {
+      strWorkerId:"21111",
+      nDebug:0,
+      strDBIP:"",
+      nDBPort:,
+      strUserName:"",
+      strPassWord:"",
+      nVersion:3,
+      strOplogModel:"rs",
+      arrOplogEventFilter:["i","u","d"],
+      arrOplogDataFilter:["MonitorGather.*"],
+      nPositionEnable:0,
+      nTime:-1,
+      nIncrement:-1,
+      strDMLListenerJSON:"/target-config.json"
+    }
+  ]
+}
+
