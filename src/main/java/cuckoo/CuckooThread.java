@@ -110,8 +110,12 @@ public class CuckooThread extends Thread {
                     }
                 }
                 if(!cuckoo.isEmpty()) {
-                    cuckooJSONObject.put("strContent", cuckoo.toString());
-                    cuckooInterface.exceptionNotice(cuckooJSONObject);
+                    // 异常缓存已经存在数据则无需再次通知
+                    if(!ExceptionCache.getInstance().isExist(cuckoo.toString())) {
+                        cuckooJSONObject.put("strContent", cuckoo.toString());
+                        cuckooInterface.exceptionNotice(cuckooJSONObject);
+                        ExceptionCache.getInstance().put(cuckoo.toString(), true);
+                    }
                 }
                 setExceptionMessage("");
             } catch(Exception e){

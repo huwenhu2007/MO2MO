@@ -69,24 +69,21 @@ public class EmailCuckooService implements CuckooInterface {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("bDebug", "false");
             jsonObject.put("bAuth", "true");
-            jsonObject.put("strHost", "smtp.exmail.qq.com");
-            jsonObject.put("strPort", "465");
+            jsonObject.put("strHost", "smtp.163.com");
+            jsonObject.put("strPort", "25");
             jsonObject.put("strProtocol", "smtp");
-            jsonObject.put("strSubject", "MO2MO Cuckoo");
+            jsonObject.put("strSubject", "MO2MO Cuckoo_1");
             jsonObject.put("strSendEmail", "");
             jsonObject.put("strUserName", "");
             jsonObject.put("strPassword", "");
             jsonObject.put("strToEmail", "");
-            jsonObject.put("strContent", "asdasd");
+            jsonObject.put("strContent", "通知地址");
 
             EmailCuckooService emailCuckooService = new EmailCuckooService();
             emailCuckooService.init(jsonObject);
 
-            while(true) {
-                emailCuckooService.exceptionNotice(jsonObject);
+            emailCuckooService.exceptionNotice(jsonObject);
 
-                Thread.sleep(60000);
-            }
 
         } catch(Exception e){
             e.printStackTrace();

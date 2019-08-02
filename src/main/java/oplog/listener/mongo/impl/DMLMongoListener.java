@@ -102,6 +102,7 @@ public class DMLMongoListener extends DMLListenerAbs {
 			logger.error(String.format("%s 事件中不存在库表信息", strSourceSign));
 			return;
 		}
+
 		// 获取需要操作的库表名称
 		String strDBName = jsonObject.getString("strDBName");
 		String strCollectionName = jsonObject.getString("strCollectionName");
@@ -160,8 +161,8 @@ public class DMLMongoListener extends DMLListenerAbs {
 		// 查询对象
 		BasicDBObject queryBsonObject = event.getQueryObj();
 		// 获取主键id
-		ObjectId objectId = queryBsonObject.getObjectId("_id");
-		updateBsonObject.put("_id", objectId);
+		Object obj = queryBsonObject.get("_id");
+		updateBsonObject.put("_id", obj);
 		// 清理查询对象
 		event.setQueryObj(null);
 	}
