@@ -135,5 +135,10 @@ email.json
   strToEmail: ""
 }
 
+dingding.json
+{ 
+  strDingdingUrl: "" 
+}
+
 # 守护线程 WorkerDaemonThread
 每隔3分钟查看一次任务信息，如果任务状态为 false，则对任务进行启动，保证任务能稳定运行
