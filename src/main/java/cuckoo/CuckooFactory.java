@@ -19,6 +19,8 @@ public class CuckooFactory {
 
         if("email".equals(strCuckooType)){
             return new EmailCuckooService();
+        } else if("dingding".equals(strCuckooType)){
+            return new DingdingCuckooService();
         }
         return null;
     }
